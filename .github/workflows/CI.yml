@@ -11,7 +11,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
+    env: 
+      DBT_USER_POST: ${{ secrets.DBT_USER_POST }}
+      DBT_PASSWORD_POST: ${{ secrets.DBT_PASSWORD_POST }}
+      
     steps:
       - uses: actions/checkout@v3
 
